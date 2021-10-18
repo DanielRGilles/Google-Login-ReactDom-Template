@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import Home from '../home/Home';
 import {
   BrowserRouter as Router,
@@ -9,6 +9,8 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+import Login from './Login';
+
 
 class App extends Component {
 
@@ -25,19 +27,11 @@ class App extends Component {
                   <Home {...routerProps}/>
                 )}
               />
-
-              <Route path="/resources" exact={true}
+              <Route path="/login" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <Login {...routerProps}/>
                 )}
               />
-
-              <Route path="/resources/:id"
-                render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
-                )}
-              />
-
               <Redirect to="/" />
 
             </Switch>
