@@ -13,7 +13,7 @@ export default class Login extends Component {
       return (
         <div>
           <GoogleLogin 
-            clientId='174877604729-5iuq0l5jbl15ve9vpr1ljnagi1gupdk4.apps.googleusercontent.com'
+            clientId=''
             buttonText='Login'
             onSuccess={this.responseGoogle}
             onFailure={this.responseGoogle}
